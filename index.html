@@ -1,0 +1,846 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ancient Scroll of Felicitations - Elden Ring Wiki | Fextralife</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 14px;
+            background-image: url('background.jpg');
+            background-attachment: fixed;
+            background-size: cover;
+            background-position: center;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        /* Чтобы поменять фон, замените URL выше на любой другой */
+        
+        .top-bar {
+            background: #2c2c2c;
+            border-bottom: 3px solid #8b6914;
+            padding: 0;
+            font-size: 12px;
+        }
+        
+        .top-bar-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 8px 15px;
+        }
+        
+        .top-links a {
+            color: #ccc;
+            text-decoration: none;
+            margin-right: 15px;
+            font-size: 11px;
+        }
+        
+        .top-links a:hover {
+            color: #fff;
+            text-decoration: underline;
+        }
+        
+        .user-panel {
+            color: #ccc;
+            font-size: 11px;
+        }
+        
+        .user-panel a {
+            color: #8b6914;
+            text-decoration: none;
+            margin-left: 10px;
+        }
+        
+        .header {
+            background: #1a1a1a;
+            border-bottom: 2px solid #8b6914;
+            padding: 15px 0;
+        }
+        
+        .header-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+        
+        .logo {
+            font-size: 28px;
+            font-weight: bold;
+            color: #d4af37;
+            text-decoration: none;
+            letter-spacing: 1px;
+        }
+        
+        .logo span {
+            color: #fff;
+            font-size: 16px;
+            font-weight: normal;
+        }
+        
+        .search-box {
+            flex-grow: 1;
+            max-width: 400px;
+        }
+        
+        .search-box input {
+            width: 100%;
+            padding: 6px 10px;
+            border: 1px solid #555;
+            background: #2a2a2a;
+            color: #fff;
+            font-size: 13px;
+        }
+        
+        .nav-menu {
+            background: #252525;
+            border-bottom: 1px solid #444;
+        }
+        
+        .nav-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+            display: flex;
+            gap: 25px;
+        }
+        
+        .nav-content a {
+            color: #ddd;
+            text-decoration: none;
+            padding: 10px 0;
+            display: block;
+            font-size: 13px;
+            border-bottom: 3px solid transparent;
+        }
+        
+        .nav-content a:hover,
+        .nav-content a.active {
+            color: #d4af37;
+            border-bottom-color: #d4af37;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 0 15px;
+            display: flex;
+            gap: 20px;
+        }
+        
+        .sidebar {
+            width: 200px;
+            flex-shrink: 0;
+        }
+        
+        .sidebar-box {
+            background: rgba(255, 255, 255, 0.95);
+            border: 1px solid #aaa;
+            margin-bottom: 15px;
+            font-size: 12px;
+        }
+        
+        .sidebar-box h3 {
+            background: #3a3a3a;
+            color: #fff;
+            padding: 8px 10px;
+            font-size: 13px;
+            font-weight: bold;
+            border-bottom: 2px solid #8b6914;
+        }
+        
+        .sidebar-box ul {
+            list-style: none;
+            padding: 10px;
+        }
+        
+        .sidebar-box ul li {
+            padding: 4px 0;
+        }
+        
+        .sidebar-box ul li a {
+            color: #0645ad;
+            text-decoration: none;
+        }
+        
+        .sidebar-box ul li a:hover {
+            text-decoration: underline;
+        }
+        
+        .main-content {
+            flex-grow: 1;
+            background: rgba(255, 255, 255, 0.95);
+            border: 1px solid #aaa;
+            padding: 0;
+        }
+        
+        .content-header {
+            background: #f6f6f6;
+            border-bottom: 1px solid #aaa;
+            padding: 10px 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .content-header h1 {
+            font-size: 24px;
+            font-weight: normal;
+            color: #000;
+        }
+        
+        .edit-links {
+            font-size: 11px;
+        }
+        
+        .edit-links a {
+            color: #0645ad;
+            text-decoration: none;
+            margin-left: 10px;
+        }
+        
+        .edit-links a:hover {
+            text-decoration: underline;
+        }
+        
+        .content-body {
+            padding: 15px 20px;
+        }
+        
+        .breadcrumb {
+            font-size: 11px;
+            color: #666;
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #ddd;
+        }
+        
+        .breadcrumb a {
+            color: #0645ad;
+            text-decoration: none;
+        }
+        
+        .breadcrumb a:hover {
+            text-decoration: underline;
+        }
+        
+        .infobox {
+            float: right;
+            width: 280px;
+            margin: 0 0 15px 15px;
+            border: 1px solid #aaa;
+            background: #f9f9f9;
+            font-size: 12px;
+        }
+        
+        .infobox-header {
+            background: #3a3a3a;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+            font-size: 16px;
+            font-weight: bold;
+        }
+        
+        .infobox-image {
+            text-align: center;
+            padding: 15px;
+            background: #fff;
+            border-bottom: 1px solid #aaa;
+        }
+        
+        .infobox-image svg {
+            max-width: 100%;
+            height: auto;
+        }
+        
+        .infobox-row {
+            display: flex;
+            border-bottom: 1px solid #ddd;
+        }
+        
+        .infobox-label {
+            background: #eee;
+            padding: 6px 10px;
+            width: 40%;
+            font-weight: bold;
+            border-right: 1px solid #ddd;
+        }
+        
+        .infobox-value {
+            padding: 6px 10px;
+            width: 60%;
+        }
+        
+        .section {
+            margin-bottom: 25px;
+        }
+        
+        .section h2 {
+            font-size: 20px;
+            font-weight: normal;
+            color: #000;
+            border-bottom: 1px solid #aaa;
+            margin-bottom: 12px;
+            padding-bottom: 5px;
+        }
+        
+        .section h3 {
+            font-size: 16px;
+            font-weight: bold;
+            color: #000;
+            margin: 15px 0 8px 0;
+        }
+        
+        .section p {
+            margin-bottom: 10px;
+            text-align: justify;
+        }
+        
+        .ancient-text-box {
+            background: #f5f5dc;
+            border: 2px solid #8b6914;
+            padding: 20px;
+            margin: 15px 0;
+            font-family: Georgia, serif;
+            font-style: italic;
+            color: #3a2a1a;
+            line-height: 2;
+            box-shadow: inset 0 0 10px rgba(0,0,0,0.1);
+        }
+        
+        .translation-box {
+            background: #f9f9f9;
+            border: 1px solid #ccc;
+            border-left: 4px solid #8b6914;
+            padding: 15px;
+            margin: 15px 0;
+        }
+        
+        .translation-box h4 {
+            font-size: 14px;
+            font-weight: bold;
+            margin-bottom: 10px;
+            color: #000;
+        }
+        
+        .note-box {
+            background: #fffacd;
+            border: 1px solid #e5d85c;
+            padding: 10px;
+            margin: 15px 0;
+            font-size: 12px;
+        }
+        
+        .note-box strong {
+            color: #8b6914;
+        }
+        
+        .stats-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0;
+            font-size: 12px;
+        }
+        
+        .stats-table th {
+            background: #eee;
+            padding: 8px;
+            text-align: left;
+            border: 1px solid #ccc;
+            font-weight: bold;
+        }
+        
+        .stats-table td {
+            padding: 8px;
+            border: 1px solid #ccc;
+        }
+        
+        .stats-table tr:nth-child(even) {
+            background: #f9f9f9;
+        }
+        
+        .gallery {
+            display: flex;
+            gap: 10px;
+            margin: 15px 0;
+        }
+        
+        .gallery-item {
+            flex: 1;
+            border: 1px solid #ccc;
+            padding: 5px;
+            background: #fff;
+            text-align: center;
+            font-size: 11px;
+        }
+        
+        .toc {
+            background: #f9f9f9;
+            border: 1px solid #aaa;
+            padding: 10px 15px;
+            margin: 15px 0;
+            display: inline-block;
+            min-width: 300px;
+        }
+        
+        .toc-title {
+            font-weight: bold;
+            font-size: 14px;
+            margin-bottom: 8px;
+            text-align: center;
+        }
+        
+        .toc ul {
+            list-style: none;
+            padding-left: 20px;
+        }
+        
+        .toc ul li {
+            margin: 5px 0;
+        }
+        
+        .toc ul li a {
+            color: #0645ad;
+            text-decoration: none;
+            font-size: 12px;
+        }
+        
+        .toc ul li a:hover {
+            text-decoration: underline;
+        }
+        
+        .categories {
+            margin-top: 30px;
+            padding-top: 15px;
+            border-top: 1px solid #ddd;
+            font-size: 11px;
+            color: #666;
+        }
+        
+        .categories a {
+            color: #0645ad;
+            text-decoration: none;
+            margin-right: 5px;
+        }
+        
+        .footer {
+            background: #2c2c2c;
+            color: #aaa;
+            text-align: center;
+            padding: 20px;
+            margin-top: 30px;
+            font-size: 11px;
+        }
+        
+        .footer a {
+            color: #8b6914;
+            text-decoration: none;
+        }
+        
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+            }
+            .sidebar {
+                width: 100%;
+            }
+            .infobox {
+                float: none;
+                width: 100%;
+                margin: 0 0 15px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="top-bar">
+        <div class="top-bar-content">
+            <div class="top-links">
+                <a href="#">Home</a>
+                <a href="#">Forum</a>
+                <a href="#">Wiki Tools</a>
+                <a href="#">Recent Changes</a>
+                <a href="#">Random Page</a>
+            </div>
+            <div class="user-panel">
+                Not logged in | <a href="#">Log in</a> <a href="#">Register</a>
+            </div>
+        </div>
+    </div>
+    
+    <div class="header">
+        <div class="header-content">
+            <a href="#" class="logo">ELDEN RING <span>Wiki</span></a>
+            <div class="search-box">
+                <input type="text" placeholder="Search the wiki...">
+            </div>
+        </div>
+    </div>
+    
+    <div class="nav-menu">
+        <div class="nav-content">
+            <a href="#" class="active">Items</a>
+            <a href="#">Weapons</a>
+            <a href="#">Armor</a>
+            <a href="#">Spells</a>
+            <a href="#">Talismans</a>
+            <a href="#">Bosses</a>
+            <a href="#">Locations</a>
+            <a href="#">NPCs</a>
+            <a href="#">Guides</a>
+        </div>
+    </div>
+    
+    <div class="container">
+        <div class="sidebar">
+            <div class="sidebar-box">
+                <h3>Navigation</h3>
+                <ul>
+                    <li><a href="#">Main Page</a></li>
+                    <li><a href="#">Getting Started</a></li>
+                    <li><a href="#">Walkthrough</a></li>
+                    <li><a href="#">Maps</a></li>
+                    <li><a href="#">Classes</a></li>
+                </ul>
+            </div>
+            
+            <div class="sidebar-box">
+                <h3>Key Items</h3>
+                <ul>
+                    <li><a href="#">Great Runes</a></li>
+                    <li><a href="#">Remembrances</a></li>
+                    <li><a href="#">Mending Runes</a></li>
+                    <li><a href="#">Memory Stones</a></li>
+                    <li><a href="#">Crystal Tears</a></li>
+                    <li><a href="#">Map Fragments</a></li>
+                    <li><a href="#">Legendary Items</a></li>
+                </ul>
+            </div>
+            
+            <div class="sidebar-box">
+                <h3>Info Items</h3>
+                <ul>
+                    <li><a href="#">Notes</a></li>
+                    <li><a href="#">Paintings</a></li>
+                    <li><a href="#">Prayerbooks</a></li>
+                    <li><a href="#">Scrolls</a></li>
+                    <li><a href="#">Cookbooks</a></li>
+                </ul>
+            </div>
+            
+            <div class="sidebar-box">
+                <h3>Community</h3>
+                <ul>
+                    <li><a href="#">Forums</a></li>
+                    <li><a href="#">Discord</a></li>
+                    <li><a href="#">Wiki Guide</a></li>
+                    <li><a href="#">How to Edit</a></li>
+                    <li><a href="#">Style Guide</a></li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="main-content">
+            <div class="content-header">
+                <h1>Ancient Scroll of Felicitations</h1>
+                <div class="edit-links">
+                    <a href="#">Edit</a> | <a href="#">History</a> | <a href="#">Talk</a> | <a href="#">View Source</a>
+                </div>
+            </div>
+            
+            <div class="content-body">
+                <div class="breadcrumb">
+                    <a href="#">Elden Ring Wiki</a> &gt; <a href="#">Items</a> &gt; <a href="#">Key Items</a> &gt; <strong>Ancient Scroll of Felicitations</strong>
+                </div>
+                
+                <div class="infobox">
+                    <div class="infobox-header">Ancient Scroll of Felicitations</div>
+                    <div class="infobox-image">
+                            <img src="scroll.png" width="220" height="220" viewBox="0 0 220 220">
+                    </div>
+                    <div class="infobox-row">
+                        <div class="infobox-label">Item Type</div>
+                        <div class="infobox-value">Key Item</div>
+                    </div>
+                    <div class="infobox-row">
+                        <div class="infobox-label">Category</div>
+                        <div class="infobox-value">Info Items</div>
+                    </div>
+                    <div class="infobox-row">
+                        <div class="infobox-label">Rarity</div>
+                        <div class="infobox-value">Legendary</div>
+                    </div>
+                    <div class="infobox-row">
+                        <div class="infobox-label">Weight</div>
+                        <div class="infobox-value">0.3</div>
+                    </div>
+                    <div class="infobox-row">
+                        <div class="infobox-label">Max Held</div>
+                        <div class="infobox-value">1</div>
+                    </div>
+                    <div class="infobox-row">
+                        <div class="infobox-label">Max Stored</div>
+                        <div class="infobox-value">-</div>
+                    </div>
+                    <div class="infobox-row">
+                        <div class="infobox-label">Sell Price</div>
+                        <div class="infobox-value">Cannot be sold</div>
+                    </div>
+                    <div class="infobox-row">
+                        <div class="infobox-label">Droppable</div>
+                        <div class="infobox-value">No</div>
+                    </div>
+                    <div class="infobox-row">
+                        <div class="infobox-label">Storable</div>
+                        <div class="infobox-value">No</div>
+                    </div>
+                </div>
+                
+                <div class="toc">
+                    <div class="toc-title">Contents</div>
+                    <ul>
+                        <li><a href="#description">1. Description</a></li>
+                        <li><a href="#lore">2. Lore and Inscription</a></li>
+                        <li><a href="#location">3. Location</a></li>
+                        <li><a href="#notes">4. Notes</a></li>
+                        <li><a href="#trivia">5. Trivia</a></li>
+                        <li><a href="#gallery">6. Gallery</a></li>
+                    </ul>
+                </div>
+                
+                <div class="section" id="description">
+                    <h2>Description</h2>
+                    <p>
+                        A weathered scroll bearing ancient script, discovered deep within the forgotten vaults of a once-great treasury. The parchment itself appears to be made from a rare material that has somehow withstood the ravages of time, maintaining its structural integrity despite what must be centuries of existence. When examined closely, the scroll emanates a faint golden glow that seems to pulse in rhythm with an unseen heartbeat, and the words inscribed upon it appear to shift and dance when viewed in flickering candlelight or under the pale light of the moon.
+                    </p>
+                    <p>
+                        Legend speaks of such ceremonial scrolls being crafted by master scribes of the Golden Order during the height of their power, specifically commissioned to commemorate moments of profound significance in the lives of individuals deemed worthy by Queen Marika herself. These scrolls were said to be imbued with minor enchantments that would preserve not only the physical document but also the sentiment and intention behind the words written upon them, ensuring that the message would remain as fresh and heartfelt as the day it was penned, even after untold ages had passed.
+                    </p>
+                    <p>
+                        The materials required to create such an artifact were expensive and difficult to procure even in the era of the Golden Order's dominance. The parchment had to be prepared from the hide of creatures touched by grace, treated with oils extracted from erdleaf flowers, and blessed by priests versed in ancient incantations. The ink was traditionally made from crushed rowa fruits mixed with melted golden runes, creating a substance that would shimmer eternally with the light of the Erdtree itself.
+                    </p>
+                </div>
+                
+                <div class="section" id="lore">
+                    <h2>Lore and Inscription</h2>
+                    <p>
+                        The scroll contains text written in what scholars of the Roundtable Hold have identified as an archaic dialect of the common tongue, predating even the establishment of the Golden Order. This form of language was reportedly used by the ancient civilizations that inhabited the Lands Between before the arrival of Queen Marika and the Greater Will's influence. The linguistic patterns and grammatical structures suggest that this particular dialect may have originated from the southern regions, possibly near the Weeping Peninsula, where remnants of pre-Golden Order culture have been found in buried ruins and forgotten catacombs.
+                    </p>
+                    <p>
+                        Brother Corhyn and the scholar Miriel, Pastor of Vows, have both examined similar texts and confirmed that such scrolls were typically commissioned by individuals of great standing to mark occasions of personal importance. The use of this ancient language, rather than the more contemporary script of the Golden Order, suggests that the commissioner specifically requested a connection to the old ways, perhaps as a way of honoring traditions that predated the current age or as a symbolic gesture acknowledging the cyclical nature of time itself in the Lands Between.
+                    </p>
+                    
+                    <h3>Original Text</h3>
+                    <div class="ancient-text-box">
+                        Hǣl wes þū on þissum dæġe!<br><br>
+                        
+                        Ġeblētsiġ sīe þīn ġebyrddæġ, mīn dēora frēond!<br><br>
+                        
+                        Þū eart sē þe brinġþ lēoht in dēorcum tīdum, and þīn blīþnes is swā beorht swā sunne on morġentīde. Mæġe þēos ġēar þē bringan eallunga þǣra þinga þe þū wilnast — wīsdōm, strēnġþu, and unendende blisse.<br><br>
+                        
+                        Swā swā wē feohtaþ tōgædere þurh þās Lands Between, swā mōte wē symbel bēon ġesihþe, dēore and unāscierendlīċe.<br><br>
+                        
+                        Drinc dēope, hlæhhe hlūde, and wīte þæt þū eart weorþfull and lufod!<br><br>
+                        
+                        Mid ealre heortan,<br>
+                        Þīn Tarnished Ġefēra
+                    </div>
+                    
+                    <h3>Translated Text</h3>
+                    <div class="translation-box">
+                        <h4>Modern Translation</h4>
+                        <p>
+                            Hail to thee on this day!<br><br>
+                            
+                            Blessed be thy birthday, my dear friend!<br><br>
+                            
+                            Thou art one who brings light in dark times, and thy joy is as bright as the sun at morning. May this year bring thee all the things thou desirest — wisdom, strength, and endless bliss.<br><br>
+                            
+                            As we fight together through these Lands Between, so may we ever be companions, dear and inseparable.<br><br>
+                            
+                            Drink deeply, laugh loudly, and know that thou art worthy and loved!<br><br>
+                            
+                            With all my heart,<br>
+                            Thy Tarnished Companion, Yarik the koldun ebuchi.<br>
+                        </p>
+                    </div>
+                    
+                    <p>
+                        The sentiment expressed in this scroll is remarkably personal and heartfelt, diverging from the formal, often impersonal tone typically found in official documents of the Golden Order. This suggests that the scroll was created outside the standard bureaucratic channels, likely commissioned privately by an individual Tarnished for another. Such personal artifacts are exceedingly rare, as most Tarnished who walk the Lands Between are solitary by necessity, their bonds with others often severed by death, madness, or the corrupting influence of the Frenzied Flame.
+                    </p>
+                </div>
+                
+                <div class="section" id="location">
+                    <h2>Location</h2>
+                    <p>
+                        This unique scroll cannot be obtained through conventional means such as combat drops, merchant purchases, or treasure chest discoveries. Instead, it manifests through what appears to be a complex series of world events and relationship mechanics that many players may never encounter during a standard playthrough.
+                    </p>
+                    
+                    <h3>Acquisition Method</h3>
+                    <p>
+                        According to reports from players who have obtained this item, the scroll appears in the player's inventory automatically when specific conditions are met. These conditions include:
+                    </p>
+                    <ul style="margin-left: 30px; margin-bottom: 15px;">
+                        <li>Completing multiple cooperative sessions with the same summoned phantom or host player</li>
+                        <li>Exchanging messages using the message writing system at least 50 times</li>
+                        <li>Successfully defeating 10 or more major bosses together without either player dying</li>
+                        <li>The game's internal calendar matching a date of personal significance encoded in your save file</li>
+                    </ul>
+                    
+                    <p>
+                        The exact trigger mechanism remains somewhat mysterious, as FromSoftware has not officially documented this item in any patch notes or official guides. Some data miners have discovered references to what they call a "fellowship coefficient" in the game's code, which appears to track cooperative interactions between specific player accounts. When this coefficient reaches a threshold value on a date marked as significant in the recipient player's account data, the scroll is automatically added to their key items inventory.
+                    </p>
+                    
+                    <div class="note-box">
+                        <strong>Important:</strong> This item appears to be tied to specific player accounts and cannot be traded or transferred. If you discard it, it cannot be recovered, even through starting New Game Plus cycles. The item does carry over into NG+ if kept, but cannot be obtained again even if all conditions are met a second time.
+                    </div>
+                </div>
+                
+                <div class="section" id="notes">
+                    <h2>Notes</h2>
+                    <ul style="margin-left: 30px; margin-bottom: 15px;">
+                        <li>The Ancient Scroll of Felicitations has no gameplay effect and serves purely as a lore item and collectible.</li>
+                        <li>Reading the scroll plays a unique sound effect not heard elsewhere in the game - a soft chime reminiscent of the sounds heard near Sites of Grace.</li>
+                        <li>Unlike other info items, this scroll cannot be given to any NPC for additional dialogue or rewards.</li>
+                        <li>The scroll's description updates slightly after being read for the first time, adding a line about "memories preserved."</li>
+                        <li>Some players have reported that having this item in their inventory causes golden fireflies to appear more frequently near Sites of Grace.</li>
+                        <li>The item's icon is unique and does not share assets with any other scroll or document in the game.</li>
+                        <li>Data miners have found unused voice lines from Melina commenting on the scroll, suggesting cut content related to this item.</li>
+                        <li>The scroll glows more brightly when viewed during nighttime in-game hours.</li>
+                        <li>This is one of the few items in the game that cannot be dropped for other players to pick up, even in your own world.</li>
+                    </ul>
+                </div>
+                
+                <div class="section" id="trivia">
+                    <h2>Trivia</h2>
+                    <ul style="margin-left: 30px; margin-bottom: 15px;">
+                        <li>The Old English text used in the scroll is grammatically accurate and uses proper Anglo-Saxon linguistic conventions, suggesting FromSoftware consulted with language experts during development.</li>
+                        <li>This item is part of what the community has dubbed the "Hidden Fellowship" questline, which includes several other secret cooperative-based items that were discovered months after the game's release.</li>
+                        <li>The scroll's item code in the game files is "sp_event_1999," with 1999 potentially referencing the year FromSoftware was founded.</li>
+                        <li>When examined in the game's files, the scroll has an unused alternate texture that shows it partially burned, suggesting it may have been involved in a cut questline involving fire or the Frenzied Flame.</li>
+                        <li>The golden seal depicted on the scroll matches the personal seal of Godfrey, First Elden Lord, though no lore explanation for this connection has been provided.</li>
+                        <li>Players who examine the scroll while wearing the full Tree Sentinel armor set report hearing additional ambient sound effects, including faint voices speaking in the old tongue.</li>
+                        <li>The scroll is one of only three items in the game that uses the "Legendary" rarity designation without being tracked by any achievement or trophy.</li>
+                        <li>Community researchers have translated dozens of other ancient texts found throughout the Lands Between, and this scroll's linguistic style most closely matches inscriptions found in the Ruined Precipice area.</li>
+                        <li>Some players theorize that this item was added as an Easter egg by developers to celebrate lasting friendships formed through the game's cooperative multiplayer system.</li>
+                        <li>The scroll's weight of 0.3 makes it one of the lightest items in the entire game, lighter even than a single arrow.</li>
+                    </ul>
+                </div>
+                
+                <div class="section" id="gallery">
+                    <h2>Gallery</h2>
+                    <div class="gallery">
+                        <div class="gallery-item">
+                            <img src="scroll.png" width="220" height="220" viewBox="0 0 220 220">
+                            <div>In-game icon</div>
+                        </div>
+                        <div class="gallery-item">
+                            <img src="scroll.png" width="180" height="180" viewBox="0 0 220 220">
+                            <div>Inventory view</div>
+                        </div>
+                        <div class="gallery-item">
+                            <svg width="180" height="120" viewBox="0 0 180 120">
+                            <img width="180" height="120" src="ER_Icon_Info_feather_gray.png">
+                                <div>Golden glow effect</div>
+                        </div>
+                    </div>
+                    <p style="font-size: 12px; margin-top: 10px; color: #666;">
+                        Note: Due to the rarity of this item, community-submitted screenshots are limited. If you have obtained this item, please consider contributing high-quality screenshots to the wiki.
+                    </p>
+                </div>
+                
+                <div class="section">
+                    <h2>Related Items</h2>
+                    <table class="stats-table">
+                        <tr>
+                            <th>Item Name</th>
+                            <th>Type</th>
+                            <th>Description</th>
+                        </tr>
+                        <tr>
+                            <td><a href="#">Deteriorated Scroll</a></td>
+                            <td>Info Item</td>
+                            <td>A damaged scroll with partially legible text about ancient ceremonies</td>
+                        </tr>
+                        <tr>
+                            <td><a href="#">Golden Scroll</a></td>
+                            <td>Sorcery Tool</td>
+                            <td>Scroll containing teachings of the Academy of Raya Lucaria</td>
+                        </tr>
+                        <tr>
+                            <td><a href="#">Royal House Scroll</a></td>
+                            <td>Sorcery Tool</td>
+                            <td>Scroll detailing sorceries of the Carian royal family</td>
+                        </tr>
+                        <tr>
+                            <td><a href="#">Missionary's Cookbook [7]</a></td>
+                            <td>Info Item</td>
+                            <td>Contains crafting recipes; similar in appearance but different purpose</td>
+                        </tr>
+                    </table>
+                </div>
+                
+                <div class="section">
+                    <h2>See Also</h2>
+                    <ul style="margin-left: 30px;">
+                        <li><a href="#">List of Key Items</a></li>
+                        <li><a href="#">List of Legendary Items</a></li>
+                        <li><a href="#">Old English in Elden Ring</a></li>
+                        <li><a href="#">Hidden Questlines</a></li>
+                        <li><a href="#">Multiplayer Mechanics</a></li>
+                        <li><a href="#">Cut Content</a></li>
+                    </ul>
+                </div>
+                
+                <div class="categories">
+                    <strong>Categories:</strong>
+                    <a href="#">Elden Ring</a> |
+                    <a href="#">Items</a> |
+                    <a href="#">Key Items</a> |
+                    <a href="#">Info Items</a> |
+                    <a href="#">Legendary Items</a> |
+                    <a href="#">Multiplayer-Related</a> |
+                    <a href="#">Hidden Content</a> |
+                    <a href="#">Lore Items</a> |
+                    <a href="#">Non-Combat Items</a> |
+                    <a href="#">Untradeable Items</a>
+                </div>
+                
+                <div style="margin-top: 30px; padding-top: 15px; border-top: 1px solid #ddd; font-size: 11px; color: #666;">
+                    <p>Last edited: 28 November 2025, 14:32 (UTC) by User:TarnishedScholar</p>
+                    <p>Content is available under <a href="#">CC BY-SA 3.0</a> unless otherwise noted.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="footer">
+        <p>Elden Ring Wiki 2022-2025 | Powered by Fextralife</p>
+        <p>
+            <a href="#">Privacy Policy</a> | 
+            <a href="#">About</a> | 
+            <a href="#">Disclaimers</a> | 
+            <a href="#">Contact</a> | 
+            <a href="#">Mobile View</a>
+        </p>
+        <p style="margin-top: 10px; font-size: 10px;">
+            ELDEN RING and related marks are trademarks of FromSoftware, Inc. and Bandai Namco Entertainment Inc.
+        </p>
+    </div>
+</body>
+</html>
